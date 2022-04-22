@@ -41,13 +41,18 @@ class SearchVC: UIViewController {
     
     // MARK: - Navigate to Followers List VC
     @objc func pushFollowerListVC() {
-        guard isUsernameEntered else { return }
+        guard isUsernameEntered else {
+            presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for 😀", buttonTitle: "Ok")
+            return
+        }
+        
         let followersListVC         = FollowersListVC()
         followersListVC.userName    = userNameTextField.text
         followersListVC.title       = userNameTextField.text
         navigationController?.pushViewController(followersListVC, animated: true)
         
     }
+    
     // MARK: - Configure logo Image
     func configureLogoImageView() {
         view.addSubview(logoImageView)
