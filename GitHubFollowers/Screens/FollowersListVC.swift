@@ -54,8 +54,13 @@ class FollowersListVC: UIViewController {
    
     // MARK: - get followers network call
     func getFollowers(userName: String, page: Int) {
+        showLoadingView()
         NetworkManager.shared.getFollowers(for: userName, page: page) { [weak self] result in
+            
             guard let self = self  else{ return}
+            
+            self.dismissLoadingView()
+            
             switch result {
             case .success(let followers):
                 if followers.count < 100 { self.hasMoreFollowers = false }
@@ -86,7 +91,7 @@ class FollowersListVC: UIViewController {
         DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) }
     }
 }
-
+// MARK: - UICollectionViewDelegate Method
 extension FollowersListVC: UICollectionViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let offsetY         = scrollView.contentOffset.y
