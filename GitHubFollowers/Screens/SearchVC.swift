@@ -30,7 +30,7 @@ class SearchVC: UIViewController {
     // MARK: - ViewController lifecycle method
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.isNavigationBarHidden = true
     }
     
     // MARK: - Create DissmissKeyboard Tap Gesture
@@ -98,7 +98,6 @@ class SearchVC: UIViewController {
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         pushFollowerListVC()
-        print("Did tapped return")
         return true
     }
 }
