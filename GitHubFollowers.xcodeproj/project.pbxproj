@@ -17,6 +17,7 @@
 		844CEAE12814070200FB0876 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844CEAE02814070200FB0876 /* ErrorMessages.swift */; };
 		844CEAE4281428D300FB0876 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844CEAE3281428D300FB0876 /* FollowerCell.swift */; };
 		844CEAE6281429BE00FB0876 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844CEAE5281429BE00FB0876 /* GFAvatarImageView.swift */; };
+		84C432AB2814DD940086ABF6 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C432AA2814DD940086ABF6 /* UIHelper.swift */; };
 		84C9AF502811042B00D2F935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AF4F2811042B00D2F935 /* AppDelegate.swift */; };
 		84C9AF522811042B00D2F935 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AF512811042B00D2F935 /* SceneDelegate.swift */; };
 		84C9AF592811043000D2F935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AF582811043000D2F935 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		844CEAE02814070200FB0876 /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		844CEAE3281428D300FB0876 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		844CEAE5281429BE00FB0876 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		84C432AA2814DD940086ABF6 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		84C9AF4C2811042B00D2F935 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C9AF4F2811042B00D2F935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C9AF512811042B00D2F935 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				844CEAE02814070200FB0876 /* ErrorMessages.swift */,
+				84C432AA2814DD940086ABF6 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				84C9AF922812880700D2F935 /* FollowersListVC.swift in Sources */,
 				84C9AF8A281206C800D2F935 /* FavoritesListVC.swift in Sources */,
 				844CEAB02812C58800FB0876 /* UIViewController+Ext.swift in Sources */,
+				84C432AB2814DD940086ABF6 /* UIHelper.swift in Sources */,
 				844CEAE6281429BE00FB0876 /* GFAvatarImageView.swift in Sources */,
 				84C9AF8C281215E100D2F935 /* GFButton.swift in Sources */,
 				844CEAAE2812BB5000FB0876 /* GFAlertVC.swift in Sources */,
