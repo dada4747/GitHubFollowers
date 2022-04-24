@@ -51,6 +51,10 @@ class FollowersListVC: UIViewController {
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
     }
     
+//    // MARK: - Configure search Controller
+//    func configureSearchController() {
+//        let searchController = UISearchController()
+//    }
    
     // MARK: - get followers network call
     func getFollowers(userName: String, page: Int) {
@@ -63,9 +67,16 @@ class FollowersListVC: UIViewController {
             
             switch result {
             case .success(let followers):
+                
                 if followers.count < 100 { self.hasMoreFollowers = false }
                 self.followers.append(contentsOf: followers)
+                if self.followers.isEmpty {
+                    let message = "This user doesn't have any followers. Go follow them 😀."
+                    DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
+                    return
+                }
                 self.updateData()
+                // TODO: - Change me later
                 print(followers)
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad Stuff Happend", message: error.rawValue, buttonTitle: "Ok")
