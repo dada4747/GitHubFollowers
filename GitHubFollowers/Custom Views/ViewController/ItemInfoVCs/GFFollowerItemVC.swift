@@ -5,8 +5,7 @@
 //  Created by admin on 25/04/22.
 //
 
-import UIKit
-
+import Foundation
 class GFFollowerItemVC: GFItemInfoVC {
 
     override func viewDidLoad() {
@@ -19,6 +18,7 @@ class GFFollowerItemVC: GFItemInfoVC {
         itemInfoViewTwo.set(itemInfoType: .following, withCount: user.following)
         actionButton.set(backgroundColor: .systemGreen, title: "Get Followers")
     }
+    
     override func actionButtonTapped() {
         delegate.didTapGetFollowers(for: user)
     }
