@@ -35,4 +35,10 @@ class GFButton: UIButton {
         titleLabel?.font        = UIFont.preferredFont(forTextStyle: .headline)
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    // MARK: - Custom initializer for background button
+    func set(backgroundColor: UIColor, title: String) {
+        self.backgroundColor = backgroundColor
+        setTitle(title, for: .normal)
+    }
 }

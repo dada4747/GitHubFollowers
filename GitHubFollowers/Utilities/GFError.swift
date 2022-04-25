@@ -1,8 +1,8 @@
 //
-//  ErrorMessages.swift
+//  GFError.swift
 //  GitHubFollowers
 //
-//  Created by admin on 23/04/22.
+//  Created by admin on 24/04/22.
 //
 
 import Foundation
