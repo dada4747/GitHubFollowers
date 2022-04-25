@@ -38,6 +38,7 @@
 		84C9AF922812880700D2F935 /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AF912812880700D2F935 /* FollowersListVC.swift */; };
 		84DD08722816CD7F0024516D /* GFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD08712816CD7F0024516D /* GFItemInfoVC.swift */; };
 		84DD08762816CE260024516D /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD08752816CE260024516D /* GFFollowerItemVC.swift */; };
+		84DD08782816DA2B0024516D /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD08772816DA2B0024516D /* PersistanceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		84C9AF912812880700D2F935 /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		84DD08712816CD7F0024516D /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
 		84DD08752816CE260024516D /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
+		84DD08772816DA2B0024516D /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				844CEABB2813986000FB0876 /* NetworkManager.swift */,
+				84DD08772816DA2B0024516D /* PersistanceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				84C9AF8C281215E100D2F935 /* GFButton.swift in Sources */,
 				844CEAAE2812BB5000FB0876 /* GFAlertVC.swift in Sources */,
 				844CEAE4281428D300FB0876 /* FollowerCell.swift in Sources */,
+				84DD08782816DA2B0024516D /* PersistanceManager.swift in Sources */,
 				84C432B8281592C40086ABF6 /* GFError.swift in Sources */,
 				844CEAAC2812BA4A00FB0876 /* GFBodyLabel.swift in Sources */,
 				844CEAB72813116D00FB0876 /* Follower.swift in Sources */,
