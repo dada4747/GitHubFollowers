@@ -21,6 +21,7 @@ class UserInfoVC: UIViewController {
     
     
     var username: String!
+    weak var delegate: FollowerListVCDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +66,7 @@ class UserInfoVC: UIViewController {
             }
         }
     }
-    
+    // MARK: - Configure ui
     func configureUIElements(with user:User) {
         
         let repoItemVC              = GFRepoItemVC(user: user)
@@ -125,6 +126,7 @@ class UserInfoVC: UIViewController {
 
 }
 
+// MARK: - user info delegate
 extension UserInfoVC: UserInfoVCDelegate {
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
@@ -135,7 +137,12 @@ extension UserInfoVC: UserInfoVCDelegate {
     }
     
     func didTapGetFollowers(for user: User) {
-        
+        guard user.followers != 0 else {
+            presentGFAlertOnMainThread(title: "No Followers", message: "This user has no followers till. 😞 ", buttonTitle: "So Sad")
+            return
+        }
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
     
 

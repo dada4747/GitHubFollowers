@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+protocol FollowerListVCDelegate: class {
+    func didRequestFollowers(for username: String)
+}
 class FollowersListVC: UIViewController {
     
     enum Section {
@@ -130,6 +132,7 @@ extension FollowersListVC: UICollectionViewDelegate {
         let follower                                = activeArray[indexPath.item]
         let destVc                                  = UserInfoVC()
         destVc.username                             = follower.login
+        destVc.delegate                             = self
         let navCotroller                            = UINavigationController(rootViewController: destVc)
         navCotroller.navigationBar.backgroundColor  = .secondarySystemBackground
         present(navCotroller, animated: true)
@@ -151,4 +154,19 @@ extension FollowersListVC: UISearchResultsUpdating, UISearchBarDelegate {
         isSearching = false
         updateData(on: followers)
     }
+}
+
+// MARK: - extension for followers delegate
+extension FollowersListVC: FollowerListVCDelegate {
+    func didRequestFollowers(for username: String) {
+        self.userName   = username
+        title           = username
+        page            = 1
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        collectionView.setContentOffset(.zero, animated: true)
+        getFollowers(userName: username, page: page)
+    }
+    
+    
 }
