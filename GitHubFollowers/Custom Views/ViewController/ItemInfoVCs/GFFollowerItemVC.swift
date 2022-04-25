@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 class GFFollowerItemVC: GFItemInfoVC {
 
     override func viewDidLoad() {
